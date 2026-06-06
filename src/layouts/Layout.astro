@@ -1,0 +1,52 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Proof of Humans - Building a better future." />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --accent: #2dd4bf;
+    --accent-dark: #0d9488;
+  }
+
+  html {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #f3f4f6;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    color: var(--accent-dark);
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--accent-dark);
+  }
+</style>
