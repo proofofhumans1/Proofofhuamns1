@@ -1,0 +1,17 @@
+name = "proofofhumans"
+type = "javascript"
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+
+[build]
+command = "npm run build"
+cwd = "./"
+
+[build.upload]
+format = "modules"
+main = "./dist/server/entry.mjs"
+
+[env.production]
+route = "proofofhumans.workers.dev"
