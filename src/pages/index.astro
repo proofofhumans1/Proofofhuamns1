@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Proof of Humans">
+  <main>
+    <h1>Welcome to Proof of Humans</h1>
+    <p>Building a decentralized identity verification system.</p>
+    
+    <section>
+      <h2>Features</h2>
+      <ul>
+        <li>Decentralized verification</li>
+        <li>Privacy-first design</li>
+        <li>Easy integration</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Get Started</h2>
+      <p>Learn more about how Proof of Humans works and integrate it into your project.</p>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+
+  section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    padding: 0.5rem 0;
+  }
+
+  li::before {
+    content: "✓ ";
+    color: var(--accent);
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+</style>
